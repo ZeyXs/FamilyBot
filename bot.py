@@ -88,10 +88,10 @@ async def on_message(message):
     if message.content.startswith("gg"):
         await client.send_message(message.channel, "👏👏👏")
 
-    if message.content.startswith("BLB", "Blb", "BLb"):
+    if message.content.startswith("Blb"):
         await client.send_message(message.channel, "🦑")
         
-    if message.content.startswith("blb", "blB", "bLB"):
+    if message.content.startswith("blb"):
         await client.send_message(message.channel, "🦑")
         
     if message.content.startswith("Bonjour"):

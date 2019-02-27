@@ -120,12 +120,10 @@ async def on_message(message):
         argscc = message.content.split(" ")
         await client.send_message(message.channel, "Coucou " + argscc[1] + " ! :D")
         
-@client.event
-async def addrole(ctx):
     if message.content.startswith("mdr"):
-        member = ctx.message.author
-        role = get(member.server.roles, name="@&443394825631301634")
-        await bot.add_roles(member, role)
+        member = message.message.author
+        role = get(member.server.roles, name="• Bot")
+        await client.add_roles(member, role)
         await client.send_message(message.channel, "lol")
         
        

@@ -12,8 +12,8 @@ async def on_ready():
     print("Bot is ready.")
     print("Loading ready. Command is ready.")
     await client.change_presence(game=discord.Game(name='/help'))
-
-
+       
+    
 @client.event
 async def on_message(message):
     author = message.author
@@ -24,6 +24,9 @@ async def on_message(message):
         await client.add_reaction(message, "✅")
         await client.add_reaction(message, "❎")
 
+    if message.content.upper().startswith("/hy"):
+        await bot.add_roles(userName, name='• Amis')  
+    
     if message.content.upper().startswith("/PING"):
         timePing = time.monotonic()
         pinger = await client.send_message(message.channel, ":ping_pong: **Pong !**")
@@ -116,10 +119,14 @@ async def on_message(message):
     if message.content.upper().startswith("/COUCOU"):
         argscc = message.content.split(" ")
         await client.send_message(message.channel, "Coucou " + argscc[1] + " ! :D")
+        
+@client.event
+async def addrole(ctx):
+    if message.content.startswith("mdr"):
+        member = ctx.message.author
+        role = get(member.server.roles, name="• Amis")
+        await bot.add_roles(member, role)
        
-    if message.content.upper().startswith("/hy"):
-        async def role(ctx, user: discord.User, role: discord.Role):
-            await bot.add_roles(userName, name='• Amis')
 
 
 client.run(os.environ['TOKEN_BOT'])

@@ -2,6 +2,7 @@ import discord
 import time
 from discord.ext import commands
 import random
+import os
 
 TOKEN = "NTQ2NjY4OTYxNTQzMjI1MzU0.D0tQAw.X4L4b8-rLWT5Bun_9DpkjSVzcWE"
 

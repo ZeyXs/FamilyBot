@@ -6,12 +6,16 @@ import os
 
 client = commands.Bot(command_prefix= "/")
 
-
 @client.event
 async def on_ready():
     print("Bot is ready.")
     print("Loading ready. Command is ready.")
     await client.change_presence(game=discord.Game(name='/help'))
+    
+@client.event
+async def on_member_join(member):
+    discord.utils.get(member.server.roles, name='• Spectateurs')
+    await client.add_roles(member, role)
        
     
 @client.event

@@ -116,11 +116,7 @@ async def on_message(message):
     if message.content.upper().startswith("/COUCOU"):
         argscc = message.content.split(" ")
         await client.send_message(message.channel, "Coucou " + argscc[1] + " ! :D")
-        
-@client.event
-async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, name='• Amis')
-    await client.add_roles(member, role)
+       
 
 
 

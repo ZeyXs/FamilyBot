@@ -122,7 +122,7 @@ async def on_message(message):
         
     if message.content.startswith("mdr"):
         member = message.author
-        role = get(member.server.roles, name="• Bot")
+        role = discord.utils.get(member.server.roles, name="• Bot")
         await client.add_roles(member, role)
         await client.send_message(message.channel, "lol")
         

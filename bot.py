@@ -124,7 +124,7 @@ async def on_message(message):
 async def addrole(ctx):
     if message.content.startswith("mdr"):
         member = ctx.message.author
-        role = get(member.server.roles, name="• Amis")
+        role = get(member.server.roles, name="<@&443394825631301634>")
         await bot.add_roles(member, role)
        
 

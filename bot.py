@@ -117,7 +117,9 @@ async def on_message(message):
         argscc = message.content.split(" ")
         await client.send_message(message.channel, "Coucou " + argscc[1] + " ! :D")
        
-
+    if message.content.upper().startswith("/hy"):
+        async def role(ctx, user: discord.User, role: discord.Role):
+            await bot.add_roles(userName, name='• Amis')
 
 
 client.run(os.environ['TOKEN_BOT'])

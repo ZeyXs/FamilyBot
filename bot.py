@@ -91,6 +91,8 @@ async def on_message(message):
     if message.content.startswith("Blb"):
         await client.send_message(message.channel, "🦑")
         
+ 
+
     if message.content.startswith("blb"):
         await client.send_message(message.channel, "🦑")
         
@@ -114,6 +116,11 @@ async def on_message(message):
     if message.content.upper().startswith("/COUCOU"):
         argscc = message.content.split(" ")
         await client.send_message(message.channel, "Coucou " + argscc[1] + " ! :D")
+        
+    if message.content.startswith("hy"):
+        user = ctx.message.author
+        role = discord.utils.get(user.server.roles, name="Titans absolus des Octariens")
+        await client.add_roles(user, role)
 
 
 

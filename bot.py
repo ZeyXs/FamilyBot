@@ -105,7 +105,7 @@ async def on_message(message):
         help.add_field(name="/say (+texte)", value="Fait dire au bot le texte", inline=True)
         help.add_field(name="/ping", value="Affiche le ping", inline=True)
         help.add_field(name="/gif", value="Donne un GIF aleatoirement!", inline=True)
-        help.add_field(name="/coucou <membre>", value="Passe le coucou à t'es amis !", inline=True)
+        help.add_field(name="/coucou <membre>", value="Passe le coucou à tes amis !", inline=True)
         await client.send_message(message.channel, embed=help)
 
     if message.content.upper().startswith("/AIDE"):

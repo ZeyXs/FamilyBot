@@ -117,10 +117,10 @@ async def on_message(message):
         argscc = message.content.split(" ")
         await client.send_message(message.channel, "Coucou " + argscc[1] + " ! :D")
         
-    if message.content.startswith("hy"):
-        user = ctx.message.author
-        role = discord.utils.get(user.server.roles, name="Titans absolus des Octariens")
-        await client.add_roles(user, role)
+@client.event
+async def on_member_join(member):
+    role = discord.utils.get(member.server.roles, name='Titans absolus des Octariens')
+    await client.add_roles(member, role)
 
 
 

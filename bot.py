@@ -86,24 +86,8 @@ async def on_message(message):
 
     if message.content.startswith("gg"):
         await client.send_message(message.channel, "👏👏👏")
-        
-    blblList = ["blb",
-                "Blb",
-                "bLb",
-                "BLB",
-                "BLb",
-                "BlB",
-                "bLB",
-                "blB"]
 
-    if message.content.startswith(["blb",
-                                   "Blb",
-                                   "bLb",
-                                   "BLB",
-                                   "BLb",
-                                   "BlB",
-                                   "bLB",
-                                   "blB"]):
+    if message.content.startswith("test1" or "test2"):
         await client.send_message(message.channel, "🦑")
         
     if message.content.startswith("Bonjour"):

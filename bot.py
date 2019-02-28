@@ -10,12 +10,7 @@ client = commands.Bot(command_prefix= "/")
 async def on_ready():
     print("Bot is ready.")
     print("Loading ready. Command is ready.")
-    await client.change_presence(game=discord.Game(name='/help'))
-    
-@client.event
-async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, name='• Spectateurs')
-    await client.add_roles(member, role)      
+    await client.change_presence(game=discord.Game(name='/help'))    
     
 @client.event
 async def on_message(message):
@@ -26,6 +21,7 @@ async def on_message(message):
     if (message.channel.id == "546624265206890507"):
         await client.add_reaction(message, "✅")
         await client.add_reaction(message, "❎") 
+        
     
     if message.content.upper().startswith("/PING"):
         timePing = time.monotonic()
@@ -90,13 +86,17 @@ async def on_message(message):
 
     if message.content.startswith("gg"):
         await client.send_message(message.channel, "👏👏👏")
-
-    if message.content.startswith("Blb"):
-        await client.send_message(message.channel, "🦑")
         
- 
+    blblList = ["blb",
+                "Blb",
+                "bLb",
+                "BLB",
+                "BLb"
+                "BlB"
+                "bLB"
+                "blB"]
 
-    if message.content.startswith("blb"):
+    if message.content.startswith(blblList):
         await client.send_message(message.channel, "🦑")
         
     if message.content.startswith("Bonjour"):
@@ -115,7 +115,7 @@ async def on_message(message):
 
     if message.content.upper().startswith("/AIDE"):
         await client.send_message(message.channel, "Merci d'éxécuter la commande /help pour avoir la liste des commandes.")
-
+        
     if message.content.upper().startswith("/COUCOU"):
         argscc = message.content.split(" ")
         await client.send_message(message.channel, "Coucou " + argscc[1] + " ! :D")

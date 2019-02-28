@@ -13,7 +13,7 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name='/help'))
     
 @client.event
-async def discord.on_message_delete(message):
+async def on_message_delete(message):
     author = message.author
     content = message.content
     await client.send_message(discord.Object(id='550634283023466530'), '🗒 : {} a supprimé le message "{}"'.format(author, content))

@@ -96,7 +96,14 @@ async def on_message(message):
                 "bLB",
                 "blB"]
 
-    if message.content.startswith(blblList):
+    if message.content.startswith(["blb",
+                                   "Blb",
+                                   "bLb",
+                                   "BLB",
+                                   "BLb",
+                                   "BlB",
+                                   "bLB",
+                                   "blB"]):
         await client.send_message(message.channel, "🦑")
         
     if message.content.startswith("Bonjour"):

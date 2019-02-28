@@ -91,9 +91,9 @@ async def on_message(message):
                 "Blb",
                 "bLb",
                 "BLB",
-                "BLb"
-                "BlB"
-                "bLB"
+                "BLb",
+                "BlB",
+                "bLB",
                 "blB"]
 
     if message.content.startswith(blblList):

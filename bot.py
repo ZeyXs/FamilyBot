@@ -26,10 +26,7 @@ async def on_message(message):
 
     if (message.channel.id == "546624265206890507"):
         await client.add_reaction(message, "✅")
-        await client.add_reaction(message, "❎")
-
-    if message.content.upper().startswith("/hy"):
-        await bot.add_roles(userName, name='• Amis')  
+        await client.add_reaction(message, "❎") 
     
     if message.content.upper().startswith("/PING"):
         timePing = time.monotonic()

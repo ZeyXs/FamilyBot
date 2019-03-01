@@ -13,6 +13,11 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name='/help'))
     
 @client.event
+async def on_member_join(member):
+    role = discord.utils.get(member.server.roles, name='• Spectateurs')
+    await client.add_roles(member, role)
+    
+@client.event
 async def on_message_delete(message):
     author = message.author
     content = message.content

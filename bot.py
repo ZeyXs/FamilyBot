@@ -95,8 +95,8 @@ async def on_message(message):
         message_content = message.content.split(' ')[1]
         print(message_content)
 
-    if message.content.upper().startswith("gg" or "clap" or "clap clap"):
-        await client.send_message(message.channel, "👏👏👏")
+    if message.content.upper().startswith("GG" or "CLAP" or "CLAP CLAP"):
+        await client.send_message(message.channel, "👏👏 Bravo 👏👏")
 
     if message.content.startswith("🐙" or "🐙🐙" or "🐙🐙🐙" or "🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙🐙🐙🐙🐙"):
         await client.send_message(message.channel, "🦑⚔🦑 EXTERMINATION 🦑⚔🦑")

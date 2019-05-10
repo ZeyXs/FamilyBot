@@ -108,7 +108,7 @@ async def on_message(message):
         
     if message.content.upper().startswith("/SUPPR"):
         await client.delete_message(message)
-        await client.delete_message(message)
+        await client.delete_message(message.upper(), "/SUPPR")
 
     if message.content.upper().startswith("/HELP"):
         help = discord.Embed(title='Commandes:', description='Voici la liste des commandes', colour=0x43d312)

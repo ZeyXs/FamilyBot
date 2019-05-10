@@ -106,7 +106,7 @@ async def on_message(message):
     if message.content.upper().startswith("BONSOIR"):
         await client.send_message(message.channel, "🦑BLBL🦑 Bonsoir à toi, ami du poulpe 🦑BLBL🦑")  
         
-    if message.content.upper().startswith("/suppr"):
+    if message.content.upper().startswith("/SUPPR"):
         await client.delete_message(message)
         await client.delete_message(message)
 

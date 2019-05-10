@@ -102,7 +102,7 @@ async def on_message(message):
         await client.send_message(message.channel, "🦑")
         
     if message.content.startswith("Bonjour"):
-        await client.send_message(message.channel, "Aurevoir")
+        await client.send_message(message.channel, "🦑BLBL🦑BONJOUR🦑BLBL🦑")
 
     if message.content.upper().startswith("/HELP"):
         help = discord.Embed(title='Commandes:', description='Voici la liste des commandes', colour=0x43d312)

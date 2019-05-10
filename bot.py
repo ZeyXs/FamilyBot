@@ -101,7 +101,7 @@ async def on_message(message):
     if message.content.startswith("test1" or "test2"):
         await client.send_message(message.channel, "🦑")
         
-    if message.content.startswith("$Bonjour"):
+    if message.content.upper().startswith("BONJOUR"):
         await client.send_message(message.channel, "🦑BLBL🦑 Bonjour à toi ami du poulpe 🦑BLBL🦑")
 
     if message.content.upper().startswith("/HELP"):

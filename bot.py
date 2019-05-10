@@ -95,14 +95,14 @@ async def on_message(message):
         message_content = message.content.split(' ')[1]
         print(message_content)
 
-    if message.content.startswith("gg"):
+    if message.content.startswith("$gg" or "$clap"):
         await client.send_message(message.channel, "👏👏👏")
 
     if message.content.startswith("test1" or "test2"):
         await client.send_message(message.channel, "🦑")
         
-    if message.content.startswith("Bonjour"):
-        await client.send_message(message.channel, "🦑BLBL🦑BONJOUR🦑BLBL🦑")
+    if message.content.startswith("$Bonjour"):
+        await client.send_message(message.channel, "🦑BLBL🦑 Bonjour à toi ami du poulpe 🦑BLBL🦑")
 
     if message.content.upper().startswith("/HELP"):
         help = discord.Embed(title='Commandes:', description='Voici la liste des commandes', colour=0x43d312)

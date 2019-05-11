@@ -101,9 +101,9 @@ async def on_message(message):
     if message.content.startswith("🐙" or "\🐙"):
         time.sleep(.5)     #Temps d'attente pour scénariser ;)
         await client.delete_message(message)
-        await client.send_message(message.channel, "*Les fidèles poulpes ninjas se sont débarrassées de l'envahisseur !*")
+        await client.send_message(message.channel, "*Les fidèles 🦑 **poulpes ninjas** 🦑 se sont débarrassées de l'envahisseur !*")
         time.sleep(3)
-        await client.delete_message(message.channel, "*Les fidèles poulpes ninjas se sont débarrassées de l'envahisseur !*")
+        await client.split(message)
         
     if message.content.upper().startswith("BONJOUR") or message.content.upper().startswith("BJOUR"):
         await client.send_message(message.channel, "🦑BLBL🦑 Bonjour à toi, ami du poulpe 🦑BLBL🦑")

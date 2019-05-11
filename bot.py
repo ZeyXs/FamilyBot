@@ -98,7 +98,7 @@ async def on_message(message):
     if message.content.upper().startswith("GG") or message.content.upper().startswith("CLAP"):
         await client.send_message(message.channel, "👏👏 Bravo 👏👏")
 
-    if message.content.contains("🐙" or "\🐙"):
+    if message.content.startswith("🐙" or "\🐙"):
         await client.delete_message(message)
         
     if message.content.upper().startswith("BONJOUR") or message.content.upper().startswith("BJOUR"):

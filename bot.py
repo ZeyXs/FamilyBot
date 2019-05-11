@@ -95,16 +95,16 @@ async def on_message(message):
         message_content = message.content.split(' ')[1]
         print(message_content)
 
-    if message.content.upper().startswith("GG" or "CLAP" or "CLAP CLAP"):
+    if message.content.upper().startswith("GG" or "CLAP"):
         await client.send_message(message.channel, "👏👏 Bravo 👏👏")
 
-    if message.content.startswith("🐙" or "🐙🐙" or "🐙🐙🐙" or "🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙🐙🐙🐙" or "🐙🐙🐙🐙🐙🐙🐙🐙🐙🐙"):
+    if message.content.startswith("🐙"):
         await client.send_message(message.channel, "🦑⚔🦑 EXTERMINATION 🦑⚔🦑")
         await client.delete_message(message)
         
-    if message.content.upper().startswith("BONJOUR"):
+    if message.content.upper().startswith("BONJOUR" or "BJOUR" ):
         await client.send_message(message.channel, "🦑BLBL🦑 Bonjour à toi, ami du poulpe 🦑BLBL🦑")
-    if message.content.upper().startswith("BONSOIR"):
+    if message.content.upper().startswith("BONSOIR" or "BSOIR"):
         await client.send_message(message.channel, "🦑BLBL🦑 Bonsoir à toi, ami du poulpe 🦑BLBL🦑")
 
     if message.content.upper().startswith("/HELP"):

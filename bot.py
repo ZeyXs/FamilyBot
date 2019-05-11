@@ -99,7 +99,6 @@ async def on_message(message):
         await client.send_message(message.channel, "👏👏 Bravo 👏👏")
 
     if "🐙" or "\🐙" in message.content:
-        await client.send_message(message.channel, "🦑⚔🦑 EXTERMINATION 🦑⚔🦑")
         
     if message.content.upper().startswith("BONJOUR") or message.content.upper().startswith("BJOUR"):
         await client.send_message(message.channel, "🦑BLBL🦑 Bonjour à toi, ami du poulpe 🦑BLBL🦑")

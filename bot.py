@@ -98,9 +98,14 @@ async def on_message(message):
     if message.content.upper().startswith("GG") or message.content.upper().startswith("CLAP"):
         await client.send_message(message.channel, "👏👏 Bravo 👏👏")
 
-    if message.content.startswith("🐙"):
+    if message.content("🐙" or "\🐙"):
         await client.send_message(message.channel, "🦑⚔🦑 EXTERMINATION 🦑⚔🦑")
         await client.delete_message(message)
+        sleep(2000)
+        await client.delete_message(message.channel, "🦑⚔🦑 EXTERMINATION 🦑⚔🦑")
+        await client.send_message(message.channel, "*Des fidèles poulpes ninjas se sont débarrassées de l'envahisseur !*")
+        sleep(3000)
+        await client.delete_message(message.channel, "*Des fidèles poulpes ninjas se sont débarrassées de l'envahisseur !*")
         
     if message.content.upper().startswith("BONJOUR") or message.content.upper().startswith("BJOUR"):
         await client.send_message(message.channel, "🦑BLBL🦑 Bonjour à toi, ami du poulpe 🦑BLBL🦑")

@@ -105,10 +105,10 @@ async def on_message(message):
         time.sleep(3)
         await client.delete_message(message)
         
-    if message.content.upper().startswith("BONJOUR") or message.content.upper().startswith("BJOUR"):
-        await client.send_message(message.channel, "🦑BLBL🦑 Bonjour à toi, ami du poulpe 🦑BLBL🦑")
-    if message.content.upper().startswith("BONSOIR") or message.content.upper().startswith("BSOIR"):
-        await client.send_message(message.channel, "🦑BLBL🦑 Bonsoir à toi, ami du poulpe 🦑BLBL🦑")
+ #   if message.content.upper().startswith("BONJOUR") or message.content.upper().startswith("BJOUR"):
+ #       await client.send_message(message.channel, "🦑BLBL🦑 Bonjour à toi, ami du poulpe 🦑BLBL🦑")
+ #   if message.content.upper().startswith("BONSOIR") or message.content.upper().startswith("BSOIR"):
+ #       await client.send_message(message.channel, "🦑BLBL🦑 Bonsoir à toi, ami du poulpe 🦑BLBL🦑")
 
     if message.content.upper().startswith("/HELP"):
         help = discord.Embed(title='Commandes:', description='Voici la liste des commandes', colour=0x43d312)

@@ -99,7 +99,7 @@ async def on_message(message):
         await client.send_message(message.channel, "👏👏 Bravo 👏👏")
 
     if message.content.startswith("🐙" or "\🐙"):
-        time.sleep(.5)     #Temps d'attente pour scénariser ;)
+        time.sleep(1)     #Temps d'attente pour scénariser ;)
         await client.delete_message(message)
         await client.send_message(message.channel, "*Les fidèles 🦑 **poulpes ninjas** 🦑 se sont débarrassés de l'envahisseur !*")
         time.sleep(3)

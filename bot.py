@@ -48,7 +48,7 @@ async def on_message(message):
         await client.edit_message(pinger, ":ping_pong: **Ping !**\n\
     `Ping: " + ping + "`")
 
-    if message.content.upper().startswith("/SAY"):
+    if message.content.upper().startswith("/SAY") unless if message.content.upper().startswith("/SAY /"):
         args = message.content.split(" ")
         await client.send_message(message.channel, (" ".join(args[1:])))
         await client.delete_message(message)
@@ -95,7 +95,7 @@ async def on_message(message):
         message_content = message.content.split(' ')[1]
         print(message_content)
 
-    if message.content.upper().startswith("GG") or message.content.upper().startswith("CLAP"):
+    if message.content.upper().startswith("GG") or message.content.upper().startswith("CLAP") or message.content.upper().startswith("Bravo") or message.content.upper().startswith("Félicitation"):
         await client.send_message(message.channel, "👏👏 Bravo 👏👏")
 
     if message.content.startswith("🐙" or "\🐙"):

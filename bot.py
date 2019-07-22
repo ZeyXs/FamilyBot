@@ -47,8 +47,11 @@ async def on_message(message):
         ping = "%.2f" % (1000 * (time.monotonic() - timePing))
         await client.edit_message(pinger, ":ping_pong: **Ping !**\n\
     `Ping: " + ping + "`")
-
-    if message.content.upper().startswith("/SAY") unless if message.content.upper().startswith("/SAY /"):
+        
+    if message.content.upper().startswith("/SAY /SAY"):
+        await client.delete_message(message)
+        
+    if message.content.upper().startswith("/SAY"):
         args = message.content.split(" ")
         await client.send_message(message.channel, (" ".join(args[1:])))
         await client.delete_message(message)

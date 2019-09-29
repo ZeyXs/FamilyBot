@@ -29,10 +29,11 @@ async def on_message(message):
     content = message.content
     print('{}: {}'.format(author, content))
 
-    if (message.channel.id == "546624265206890507"):
-        await client.add_reaction(message, "✅")
-        await client.add_reaction(message, "❎") 
-        
+    if (message.channel.id == "627798520715542529"):
+        if message.content.upper().startswith("/sdg pc"):
+            await client.add_reaction(message, "✅")
+            await client.add_reaction(message, "❎")
+
     
     if message.content.upper().startswith("/PING"):
         timePing = time.monotonic()

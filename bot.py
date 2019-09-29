@@ -29,10 +29,15 @@ async def on_message(message):
     content = message.content
     print('{}: {}'.format(author, content))
 
+    nbprop = 0;
     if (message.channel.id == "627798520715542529"):
-        if message.content.upper().startswith("/sdg pc"):
-            await client.add_reaction(message, "✅")
-            await client.add_reaction(message, "❎")
+        if message.content.upper().startswith("/SDG PC"):
+            args = message.content.split(" ")
+                await client.send_message(message.channel, (" ".join(args[1:])))
+                await client.add_reaction(args, "✅")
+                await client.add_reaction(args, "❎")
+                await client.delete_message(message)
+        else if message.content.upper().startswith("/sdg "):
 
     
     if message.content.upper().startswith("/PING"):
